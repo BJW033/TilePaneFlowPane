@@ -37,7 +37,8 @@ public class MyMovingImageView2 extends Application {
     @Override
     public void start(Stage stage) {
 
-    	Image im1 = new Image(getClass().getResourceAsStream("/img/commonMilkweed.png"));
+    	Image im1 = new Image(getClass().getResourceAsStream("/img/commonMilkweed.png"),100,100,true,false);
+    
     	iv1.setImage(im1);
     	iv1.setPreserveRatio(true);
     	iv1.setFitHeight(100);
@@ -47,7 +48,7 @@ public class MyMovingImageView2 extends Application {
     	
     	
     	
-    	
+    
     	
     	
     	tP.setStyle("-fx-background-color: blue;");

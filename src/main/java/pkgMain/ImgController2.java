@@ -41,7 +41,7 @@ public class ImgController2 {
 	}
 	
 	
-	
+
 	
 
 	public void  onMouseEntered(MouseEvent event) {
@@ -85,6 +85,7 @@ public class ImgController2 {
 		Dragboard db = n.startDragAndDrop(TransferMode.ANY);
 		
 		ClipboardContent content = new ClipboardContent();
+		
         content.putImage(view.getImageView().getImage());
         db.setContent(content);
 		event.consume();
