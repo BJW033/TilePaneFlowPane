@@ -42,26 +42,22 @@ public class MyMovingImageView2 extends Application {
     	iv1.setPreserveRatio(true);
     	iv1.setFitHeight(100);
     
-    	iv1.setOnMouseDragged(imc.getHandlerForDrag());
-    		/*iv1.setOnDragDropped(imc.getHandlerForDragDroppedIM1());
-    	iv1.setOnDragDone(value);
-    	*/
-    	
-    	Image im2 = new Image(getClass().getResourceAsStream("/img/commonMilkweed.png"));
-    	ImageView iv2 = new ImageView();
-    	iv2.setImage(im2);
-    	iv2.setPreserveRatio(true);
-    	iv2.setFitHeight(100);
+    	//iv1.setOnMouseDragged(imc.getHandlerForDrag());
+    	iv1.setOnDragDetected(imc.getHandlerForDragDetected());
     	
     	
     	
-    	tP.getChildren().add(iv2);
+    	
+    	
+    	
     	tP.setStyle("-fx-background-color: blue;");
     	tP.setMaxHeight(100);
     	tP.setMaxWidth(400);
+    	
     	tP.setOnMouseEntered(imc.getHandlerForMouseEnter());
     	tP.setOnMouseExited(imc.getHandlerForMouseExited());
-    	//tP.setOnDragDropped(imc.getHandlerForDragDropped());
+    	tP.setOnDragOver(imc.getHandlerForsetOnDragOver());
+    	tP.setOnDragDropped(imc.getHandlerforsetOnDragDropped());
     	
     	fP.getChildren().add(iv1);
     	fP.setStyle("-fx-background-color: darkgray;");
@@ -82,7 +78,7 @@ public class MyMovingImageView2 extends Application {
         stage.setScene(scene);
         
         
-        System.out.println(iv1.getX() + iv1.getY());
+        
 	
 		//iv1.setTranslateX(iv1.getLayoutX() - WIDTH/2 + imc.getStartingX());
 		//iv1.setTranslateY(iv1.getLayoutY() - HEIGHT/2 + imc.getStartingY());
@@ -100,6 +96,15 @@ public class MyMovingImageView2 extends Application {
     }
     public TilePane getTilePane() {
     	return tP;
+    }
+    public ImageView getImageView() {
+    	return iv1;
+    }
+    public ImageView createImageView(Image img) {
+    	ImageView copy = new ImageView(img);
+    	copy.setFitHeight(100);
+    	copy.setPreserveRatio(true);
+    	return copy;
     }
 
 }
