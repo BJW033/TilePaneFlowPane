@@ -106,6 +106,7 @@ public class ImgController2 {
 
 	}
 	
+	
 	public void dragDropped(DragEvent event) {
 		Node n =(Node)event.getSource();
 		Dragboard db = event.getDragboard();
