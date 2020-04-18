@@ -43,7 +43,7 @@ public class ImgController2 {
 	
 
 	
-
+/*
 	public void  onMouseEntered(MouseEvent event) {
 		Node n = (Node)event.getSource();
 		if (DEBUG) System.out.println("TilePane Rolled OVer" );
@@ -52,6 +52,8 @@ public class ImgController2 {
 	public EventHandler getHandlerForMouseEnter() {
 		return event -> onMouseEntered((MouseEvent) event);
 	}
+	
+*/
 /*	public void tellModelStartingCoords(double x, double y) {
 		model.setX(view.getImgStartingX());
 		model.setY(view.getImgStartingY());
@@ -66,7 +68,7 @@ public class ImgController2 {
 	}
 
 
-
+/*
 	public void  onMouseExited(MouseEvent event) {
 		Node n = (Node)event.getSource();
 		if (DEBUG) System.out.println("TilePane Rolled OVer" );
@@ -76,7 +78,7 @@ public class ImgController2 {
 	public EventHandler getHandlerForMouseExited() {
 		return event -> onMouseExited((MouseEvent) event);
 	}
-
+*/
 
 	public void dragDetected(MouseEvent event) {
 		Node n =(Node)event.getSource();

@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  */
 
 public class MyMovingImageView2 extends Application {
-
+	
 	private ImgController2 imc;
 	private ImageView iv1;
 	private final double WIDTH = 800;
@@ -26,7 +26,7 @@ public class MyMovingImageView2 extends Application {
 	private TilePane tP;
 	private FlowPane fP;
 	
-	
+
 	public MyMovingImageView2(){
     	iv1 = new ImageView();
 		imc = new ImgController2(this);
@@ -55,8 +55,8 @@ public class MyMovingImageView2 extends Application {
     	tP.setMaxHeight(100);
     	tP.setMaxWidth(400);
     	
-    	tP.setOnMouseEntered(imc.getHandlerForMouseEnter());
-    	tP.setOnMouseExited(imc.getHandlerForMouseExited());
+    	//tP.setOnMouseEntered(imc.getHandlerForMouseEnter());
+    	//tP.setOnMouseExited(imc.getHandlerForMouseExited());
     	tP.setOnDragOver(imc.getHandlerForsetOnDragOver());
     	tP.setOnDragDropped(imc.getHandlerforsetOnDragDropped());
     	
